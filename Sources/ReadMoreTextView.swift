@@ -211,10 +211,7 @@ public class ReadMoreTextView: UITextView {
     private var cachedIntrinsicContentHeight: CGFloat?
     
     public override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        return hitTest(pointInGliphRange: point, event: event) { _ in
-            guard pointIsInReadMoreOrReadLessTextRange(point: point) != nil else { return nil }
-            return self
-        }
+        self
     }
     
     public override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
